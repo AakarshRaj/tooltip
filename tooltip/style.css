@@ -1,0 +1,100 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#main{
+    height: 100vh;
+    width: 100vw;
+    background: #7f8fa6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.icons_menu{
+    display: flex;
+}
+.icon{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.icon span{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+.icon span i{
+    font-size: 25px;
+}
+.tooltip{
+    position: absolute;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    background: #fff;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: 0.4s cubic-bezier(0.4, -0.55, 0.265, 2);
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+.tooltip::before{
+    position: absolute;
+    content: '';
+    height: 15px;
+    width: 15px;
+    background: #fff;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%) rotate(45deg);
+    transition: 0.4s cubic-bezier(0.4, -0.55, 0.265, 2);
+}
+.icon:hover .tooltip{
+    transform: translateY(-70px);
+    opacity: 1;
+}
+.icon:hover span{
+    color: #fff;
+}
+.icon:hover span,
+.icon:hover .tooltip{
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+}
+.facebook:hover span,
+.facebook:hover .tooltip,
+.facebook:hover .tooltip::before{
+    background: #3B5999;
+}
+.twitter:hover span,
+.twitter:hover .tooltip,
+.twitter:hover .tooltip::before{
+    background: #46C1F6;
+}
+.instagram:hover span,
+.instagram:hover .tooltip,
+.instagram:hover .tooltip::before{
+    background: #e1306c;
+}
+.github:hover span,
+.github:hover .tooltip,
+.github:hover .tooltip::before{
+    background: #333;
+}
+.youtube:hover span,
+.youtube:hover .tooltip,
+.youtube:hover .tooltip::before{
+    background: #DE463B;
+}
